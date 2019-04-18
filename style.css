@@ -138,6 +138,10 @@ header nav ul {
     align-items: center;
 }
 
+footer {
+    max-height: 60px;
+}
+
 button {
     background-color: transparent;
     border: none;
@@ -241,8 +245,4 @@ button {
 .grid-item:active,
 .grid-item:hover {
     border: 1px solid var(--main-accent);
-}
-
-.hide {
-    opacity: 0 !important;
 }
