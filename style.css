@@ -189,9 +189,8 @@ button {
     -o-background-size: cover;
     background-size: cover;
     background-position: 70% 35%;
-    display: table;
 
-    top: 0vh;
+    top: 0;
     filter: grayscale(1) brightness(1.4) contrast(0.5);
     position: fixed;
     width: 100vw;
