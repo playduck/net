@@ -69,13 +69,17 @@
         height: 496px !important;
     }
 
+    .content {
+        padding: 3em 0!important;
+    }
+
     .grid-container {
         grid-template-columns: 1fr !important;
     }
 
     .grid-item {
-        width: 45vh !important;
-        height: 45vh !important;
+        width: 40vh !important;
+        height: 40vh !important;
     }
 }
 
@@ -225,6 +229,7 @@ button {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px 15px;
     background-color: var(--main-bg);
+    margin: 0 auto;
 }
 
 .grid-item {
