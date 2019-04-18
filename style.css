@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after    {
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1550px) {
+    .big::before {
+        content: "R"!important;
+        top: -180pt!important;
+        left: -70pt!important;
+        transform: none!important;
+    }
+    header {
+        margin-bottom: 636px!important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html,
+    body {
+        font-size: 12pt!important;
+    }
+    .title  {
+        display: none;
+        visibility: hidden;
+    }
+    .hero-img {
+        height: 496px!important;
+    }
+}
+
+html,
+body {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--main-bg);
+    color: var(--main-text);
+
+    font-size: 18pt;
+    font-family: neue-haas-grotesk-display,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 1pt;
+}
+
+#main-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header  {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+
+    width: 100vw;
+    height: 5vh;
+    max-height: 40px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 12pt;
+    background-color: var(--sec-bg);
+    z-index: 600;
+
+    margin-bottom: 700px;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: var(--main-text);
+    text-decoration: underline;
+    cursor: pointer;
+
+    font-size: 12pt;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.big::before {
+    content: "robin.";
+
+    font-family: yrsa, serif!important;
+    font-weight: 500!important;
+    font-style: normal;
+    letter-spacing: -140px;
+
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: -150pt;
+    left: 50%;
+    transform: translate(-55%, 0);
+    font-size: 800pt;
+
+    z-index: 500;
+}
+
+.hero-img {
+    background: url("./img/hero.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 70% 35%;
+    display: table;
+
+    top: 0vh;
+    filter: grayscale(1) brightness(1.4) contrast(0.5);
+    /* opacity: 0.85; */
+    position: fixed;
+    width: 100vw;
+    height: 600px;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+.thicc {
+    font-family: neue-haas-grotesk-display,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.highlight {
+    color: var(--main-accent)!important;
+}
+
+.content {
+    position: relative;
+    padding: 3em 1em;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 400;
+    background-color: var(--main-bg);
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.long {
+    height: 5000px;
+    background-color: var(--sec-bg);
+}
