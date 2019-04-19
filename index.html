@@ -56,7 +56,6 @@
         </header>
         <main>
             <hero>
-                <span class="big highlight"></span>
                 <span class="big"></span>
                 <div class="hero-img"></div>
             </hero>
@@ -68,7 +67,10 @@
                         Ich mach Zeug, glaub ich.
                     </p>
                     <div class="video-container">
-                        <video preload muted loop id="avatar" src="./img/avatar.mp4">
+                        <video autoplay preload muted loop playsinline id="avatar">
+                            <source src="./img/avatar.webm" type="video/webm">
+                            <source src="./img/avatar.mov" type="video/mp4">
+                            <source src="./img/avatar.mp4" type="video/mov">
                         Nö, video geht nicht. :(
                         </video>
                     </div>

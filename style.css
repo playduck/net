@@ -137,7 +137,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
-
+    border-bottom: 4px solid var(--main-accent);
     margin-bottom: 700px;
 }
 
@@ -153,6 +153,7 @@ footer {
     padding: 1em;
     max-height: 150px!important;
     height: 10vh!important;
+    border-top: 4px solid var(--main-accent);
 }
 
 

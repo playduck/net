@@ -2,5 +2,7 @@
 /* jshint esversion: 6 */
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("avatar").play();
+    setTimeout( () => {
+        document.getElementById("avatar").play();
+    }, 200);
 }, false);
