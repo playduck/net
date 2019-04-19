@@ -17,7 +17,7 @@
     <!-- <link rel="stylesheet" href="https://use.typekit.net/fbk1dok.css"> -->
     <link rel="preconnect" href="https://use.typekit.net/">
     <link rel="stylesheet" href="style.css">
-    <!-- <script type="application/javascript" src="./main.js"></script> -->
+    <script type="application/javascript" src="./main.js"></script>
     <style id="root">
         :root {
             --main-bg: #363B59;
@@ -52,8 +52,10 @@
                     <p>
                         Hier sollte halt irgendein text hin... <br>
                         Ähh ich meine, Lorem Ipsum dolor sit amet.
-                        <div class="video"></div>
                     </p>
+                    <div class="video-container">
+                      <video preload muted loop id="avatar" src="./img/avatar.mp4"></video>
+                    </div>
                 </div>
                 <div class="grid-container" id="images">
                     <div class="grid-item" style="background-image: url(./img/projects/0.jpg);"></div>
@@ -76,10 +78,13 @@
 
     <svg>
         <filter id="tint">
-                <feColorMatrix in="SourceGraphic" type="saturate" result="saturate" values="0.05"></feColorMatrix>
+                <feColorMatrix in="SourceGraphic" type="saturate" result="saturate" values="0.0"></feColorMatrix>
                 <feFlood flood-color="var(--main-bg)" result="fill"></feFlood>
-                <feComposite in="saturate" in2="fill" operator="arithmetic" k1="5" k2="1.2" k3="2" k4="0.01" result="out"></feComposite>
+                <feComposite in="saturate" in2="fill" operator="arithmetic" k1="0" k2="1" k3="1.001" k4="-0.011" result="out"></feComposite>
                 <feComposite operator="in" result="alpha" in="out" in2="SourceAlpha"></feComposite>
+        </filter>
+        <filter id="crop">
+
         </filter>
     </svg>
 
