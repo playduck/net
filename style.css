@@ -42,9 +42,10 @@
 
 @media only screen and (max-width: 1550px) {
     .big::before {
-        content: "R" !important;
+        content: "R." !important;
         top: -180pt !important;
         left: -70pt !important;
+        letter-spacing: -35pt!important;
         transform: none !important;
     }
 
@@ -118,6 +119,7 @@ body {
 }
 
 .bar {
+    color: var(--main-bg);
     width: 100vw;
     height: 5vh;
     max-height: 40px;
@@ -175,7 +177,8 @@ button {
     font-style: normal;
     letter-spacing: -140px;
 
-    mix-blend-mode: overlay;
+    mix-blend-mode: normal;
+
     position: absolute;
     top: -150pt;
     left: 50%;
@@ -195,7 +198,7 @@ button {
     background-position: 70% 35%;
 
     top: 0;
-    filter: url(#tint);
+    filter: brightness(1.4) url(#tint);
     position: fixed;
     width: 100vw;
     height: 600px;
@@ -213,7 +216,7 @@ button {
 
 .content {
     position: relative;
-    padding: 3em 1em;
+    padding: 5em 1em 3em 1em;
     margin: 0 auto;
     width: 100%;
     z-index: 4;
@@ -234,7 +237,7 @@ button {
     height: 256px;
     margin: 0 auto;
     border-radius: 999px;    
-    border: 2px solid var(--main-accent);
+    border: 4px solid var(--main-accent);
 }
 
 video{
@@ -275,6 +278,6 @@ video{
 
 .grid-item:active,
 .grid-item:hover {
-    border: 2px solid var(--main-accent);
+    border: 4px solid var(--main-accent);
     filter: none;
 }

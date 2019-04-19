@@ -20,16 +20,20 @@
     <script type="application/javascript" src="./main.js"></script>
     <style id="root">
         :root {
-            --main-bg: #363B59;
-            --main-text: rgb(204, 215, 244);
+            --main-bg: rgb(255, 255, 255);
+            --main-text: rgb(16, 16, 16);
+            --main-accent: rgb(73, 163, 242);
+            --sec-bg: rgb(57, 57, 57);
+/*             --main-bg: #363B59;
+            --main-text: #CCD7F4;
             --main-accent: #48D9CA;
-            --sec-bg: #3D4573;
+            --sec-bg: #3D4573; */
         }
     </style>
     <svg>
         <filter id="tint">
                 <feColorMatrix in="SourceGraphic" type="saturate" result="saturate" values="0.0"></feColorMatrix>
-                <feFlood flood-color="var(--main-bg)" result="fill"></feFlood>
+                <feFlood flood-color="var(--sec-bg)" result="fill"></feFlood>
                 <feComposite in="saturate" in2="fill" operator="arithmetic" k1="0" k2="1" k3="1.001" k4="-0.011" result="out"></feComposite>
                 <feComposite operator="in" result="alpha" in="out" in2="SourceAlpha"></feComposite>
         </filter>
@@ -60,12 +64,18 @@
                 <div class="bio">
                     <span class="thicc">Hey!</span><br>
                     <p>
-                        Hier sollte halt irgendein text hin... <br>
-                        Ähh ich meine, Lorem Ipsum dolor sit amet.
+                        Ich bin Robin. <br>
+                        Ich mach Zeug, glaub ich.
                     </p>
                     <div class="video-container">
-                      <video preload muted loop id="avatar" src="./img/avatar.mp4"></video>
+                        <video preload muted loop id="avatar" src="./img/avatar.mp4">
+                        Nö, video geht nicht. :(
+                        </video>
                     </div>
+                    <p>
+                        Das da ist ein Video. Ich weiß aber nicht ob das überall funktioniert. <br>
+                        Aber wissen ist halt auch überbewertet.
+                    </p>
                 </div>
                 <div class="grid-container" id="images">
                     <div class="grid-item" style="background-image: url(./img/projects/0.jpg);"></div>
@@ -81,7 +91,7 @@
             </div>
         </main>
         <footer class="bar">
-            hmu and gimme money i guess <br>
+            <p>Äh, ja... Footer text hier</p>
             <p>&#169; Robin Prillwitz 2019</p>
         </footer>
     </div>

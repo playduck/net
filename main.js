@@ -4,4 +4,3 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("avatar").play();
 }, false);
-
