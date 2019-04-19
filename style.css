@@ -124,7 +124,7 @@ body {
 
     font-size: 12pt;
     background-color: var(--sec-bg);
-    z-index: 600;
+    z-index: 6;
 }
 
 header {
@@ -178,7 +178,7 @@ button {
     transform: translate(-55%, 0);
     font-size: 800pt;
 
-    z-index: 500;
+    z-index: 5;
     pointer-events: none;
 }
 
@@ -212,7 +212,7 @@ button {
     padding: 3em 1em;
     margin: 0 auto;
     width: 100%;
-    z-index: 400;
+    z-index: 4;
     background-color: var(--main-bg);
     display: flex;
     flex-direction: column;
