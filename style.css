@@ -51,6 +51,10 @@
     header {
         margin-bottom: 600px !important;
     }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr!important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -179,7 +183,7 @@ button {
     font-size: 800pt;
 
     z-index: 5;
-    pointer-events: none;
+    pointer-events: scroll;
 }
 
 .hero-img {
@@ -221,6 +225,16 @@ button {
 .bio {
     text-align: center;
     margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.video {
+    width: 256px;
+    height: 256px;
+    margin: 0 auto;
+    border-radius: 999px;
+    border: 1px solid var(--main-accent);
 }
 
 .grid-container {
