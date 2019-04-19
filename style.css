@@ -191,7 +191,7 @@ button {
     background-position: 70% 35%;
 
     top: 0;
-    filter: grayscale(1) brightness(1.4) contrast(0.5);
+    filter: url(#tint);
     position: fixed;
     width: 100vw;
     height: 600px;
@@ -233,7 +233,7 @@ button {
 
 .grid-item {
     background-color: var(--sec-bg);
-    border: 1px solid var(--sec-bg);
+    border: none;
 
     padding: 12pt;
     width: 25vw;
@@ -244,13 +244,16 @@ button {
     background-position: center;
     background-repeat: no-repeat;
 
-    -webkit-transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
-    -moz-transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
-    -o-transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
-    transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+    -webkit-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+    -moz-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+    -o-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+    transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+
+    filter: url(#tint);
 }
 
 .grid-item:active,
 .grid-item:hover {
-    border: 1px solid var(--main-accent);
+    border: 2px solid var(--main-accent);
+    filter: none;
 }

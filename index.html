@@ -55,24 +55,15 @@
                     </p>
                 </div>
                 <div class="grid-container" id="images">
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/0.jpg);"></div>
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/1.jpg);"></div>
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/2.jpg);"></div>
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/3.jpg);"></div>
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/4.jpg);"></div>
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/5.jpg);"></div>
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/6.jpg);"></div>
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/7.jpg);"></div>
-                    <div class="grid-item"
-                        style="background-image: url(./img/projects/8.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/0.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/1.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/2.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/3.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/4.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/5.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/6.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/7.jpg);"></div>
+                    <div class="grid-item" style="background-image: url(./img/projects/8.jpg);"></div>
                 </div>
             </div>
         </main>
@@ -81,6 +72,15 @@
             <p>&#169; Robin Prillwitz 2019</p>
         </footer>
     </div>
+
+    <svg>
+        <filter id="tint">
+                <feColorMatrix type="saturate" values="0.05" result="saturate" in="SourceGraphic"></feColorMatrix>
+                <feFlood flood-color="var(--main-bg)" result="fill"></feFlood>
+                <feComposite operator="arithmetic" k1="10" k2="1.2" k3="0.6" k4=".2" result="out" in="saturate" in2="fill"></feComposite>
+        </filter>
+    </svg>
+
 </body>
 
 </html>
