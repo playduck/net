@@ -43,7 +43,7 @@
 @media only screen and (max-width: 1550px) {
     .big::before {
         content: "R." !important;
-        top: -180pt !important;
+        top: -203pt !important;
         left: -70pt !important;
         letter-spacing: -35pt!important;
         transform: none !important;
@@ -52,10 +52,13 @@
     header {
         margin-bottom: 600px !important;
     }
-
+    .description {
+        flex-direction: column!important;
+    }
     .grid-container {
         grid-template-columns: 1fr 1fr!important;
     }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -119,7 +122,6 @@ body {
 }
 
 .bar {
-    color: var(--main-bg);
     width: 100vw;
     height: 5vh;
     max-height: 40px;
@@ -137,7 +139,6 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
-    border-bottom: 4px solid var(--main-accent);
     margin-bottom: 700px;
 }
 
@@ -150,12 +151,11 @@ header nav ul {
 
 footer {
     position: relative;
-    padding: 1em;
+    padding: 0.25em;
     max-height: 150px!important;
     height: 10vh!important;
     border-top: 4px solid var(--main-accent);
 }
-
 
 button {
     background-color: transparent;
@@ -176,9 +176,9 @@ button {
     font-family: yrsa, serif !important;
     font-weight: 500 !important;
     font-style: normal;
-    letter-spacing: -140px;
+    letter-spacing: -130px;
 
-    mix-blend-mode: normal;
+    mix-blend-mode: overlay;
 
     position: absolute;
     top: -150pt;
@@ -203,6 +203,10 @@ button {
     position: fixed;
     width: 100vw;
     height: 600px;
+}
+
+h1 {
+    margin: 0;
 }
 
 .thicc {
@@ -233,10 +237,17 @@ button {
     flex-direction: column;
 }
 
+.description {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
 .video-container {
     width: 256px;
     height: 256px;
-    margin: 0 auto;
+    margin: 2em auto;
     border-radius: 999px;    
     border: 4px solid var(--main-accent);
 }
@@ -281,4 +292,16 @@ video{
 .grid-item:hover {
     border: 4px solid var(--main-accent);
     filter: none;
+}
+
+.form {
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 2em;
+    cursor: pointer;
+}
+.form a {
+    color: var(--main-accent);
+    background-color: var(--sec-bg);
+    text-decoration: none;
 }

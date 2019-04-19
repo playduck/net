@@ -20,10 +20,10 @@
     <script type="application/javascript" src="./main.js"></script>
     <style id="root">
         :root {
-            --main-bg: rgb(255, 255, 255);
-            --main-text: rgb(16, 16, 16);
+            --main-bg: rgb(16, 16, 16);
+            --main-text: rgb(225, 225, 225);
             --main-accent: rgb(125, 190, 242);
-            --sec-bg: rgb(43, 43, 43);
+            --sec-bg: rgb(24, 56, 85);
 /*             --main-bg: #363B59;
             --main-text: #CCD7F4;
             --main-accent: #48D9CA;
@@ -32,12 +32,10 @@
     </style>
     <svg>
         <filter id="tint">
-                <feColorMatrix in="SourceGraphic" type="saturate" result="saturate" values="0.0"></feColorMatrix>
+                <feColorMatrix in="SourceGraphic" type="saturate" result="saturate" values="0.08"></feColorMatrix>
                 <feFlood flood-color="var(--sec-bg)" result="fill"></feFlood>
                 <feComposite in="saturate" in2="fill" operator="arithmetic" k1="0" k2="1" k3="1.001" k4="-0.011" result="out"></feComposite>
                 <feComposite operator="in" result="alpha" in="out" in2="SourceAlpha"></feComposite>
-        </filter>
-        <filter id="crop">
         </filter>
     </svg>
 </head>
@@ -46,38 +44,40 @@
     <div id="main-content">
         <header class="bar">
             <div><span class="thicc highlight">Robin</span> <i>Prillwitz</i></div>
-            <span class="title">Fotos & Zeug</span>
-            <!-- <nav>
-                <ul>
-                    <li><button>Ich</button></li>
-                    <li><button>Zeug</button></li>
-                </ul>
-            </nav> -->
+            <!-- <span class="title">Fotos & Zeug</span> -->
         </header>
         <main>
             <hero>
-                <span class="big"></span>
+                <span class="big highlight"></span>
                 <div class="hero-img"></div>
             </hero>
             <div class="content">
                 <div class="bio">
-                    <span class="thicc">Hey!</span><br>
+                    <h1>Ich bin Robin.</h1>
                     <p>
-                        Ich bin Robin. <br>
-                        Ich mach Zeug, glaub ich.
+                        Ich mache Fotos, Videos, Filme & Animationen.<br>
                     </p>
                     <div class="video-container">
                         <video autoplay preload muted loop playsinline id="avatar">
                             <source src="./img/avatar.webm" type="video/webm">
                             <source src="./img/avatar.mov" type="video/mp4">
                             <source src="./img/avatar.mp4" type="video/mov">
-                            Nö, video geht nicht. :(
                         </video>
                     </div>
-                    <p>
-                        Das da ist ein Video. Ich weiß aber nicht ob das überall funktioniert. <br>
-                        Aber wissen ist halt auch überbewertet.
-                    </p>
+                    <div class="description">
+                        <div>
+                            <h2>Wo?</h2>
+                            <p>In und um Eggenfelden in Niederbayern.</p>
+                        </div>
+                        <div>
+                            <h2>Was?</h2>
+                            <p>Gute Frage! Weiß ich auch nicht.</p>
+                        </div>
+                        <div>
+                            <h2>?!?</h2>
+                            <p>Drei Sachen sehn gut aus. Aber was noch?</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="grid-container" id="images">
                     <div class="grid-item" style="background-image: url(./img/projects/0.jpg);"></div>
@@ -90,10 +90,13 @@
                     <div class="grid-item" style="background-image: url(./img/projects/7.jpg);"></div>
                     <div class="grid-item" style="background-image: url(./img/projects/8.jpg);"></div>
                 </div>
+                <div class="form">
+                    <a href="mailto:robin@robin-prillwitz.de?subject=Some%20Subject&body=I%20wanna%20give%20you%20money">Ayyyyy shoot me a mail or shoot me, idc</a>
+                </div>
             </div>
         </main>
         <footer class="bar">
-            <p>Äh, ja... Footer text hier</p>
+            <p>robin@robin-prillwitz.de</p>
             <p>&#169; Robin Prillwitz 2019</p>
         </footer>
     </div>
