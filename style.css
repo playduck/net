@@ -29,6 +29,9 @@
 *::after {
     box-sizing: border-box;
 }
+*:focus {
+    outline-color: var(--main-accent)!important;
+}
 
 ::-moz-selection {
     color: var(--sec-bg);
@@ -279,11 +282,11 @@ video{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+/* 
     -webkit-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
     -moz-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
     -o-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
-    transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+    transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000); */
 
     filter: url(#tint);
 }
@@ -294,14 +297,60 @@ video{
     filter: none;
 }
 
-.form {
-    margin: 0 auto;
+form {
+    margin: 4em auto 0 auto;
     padding: 1em;
-    font-size: 2em;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+}  
+
+form input,
+form textarea {
+    padding: 5pt;
+    font-size: 16pt;
+    margin: 5pt;
+    border-radius: 2pt;
+    text-align: center;
+
+    background-color: var(--main-bg);
+    border: none;
+    color: var(--main-text);
+
+    border-bottom: 2px solid var(--main-accent);
+    margin-bottom: 2px;
+}
+
+form input:hover,
+form textarea:hover,
+form input:focus,
+form textarea:focus {
+    border-bottom: 4px solid var(--main-accent)!important;
+    margin-bottom: 0px!important;
+}
+
+form input[type="submit"]   {
     cursor: pointer;
 }
-.form a {
-    color: var(--main-accent);
+
+form input[type="submit"]:hover   {
     background-color: var(--sec-bg);
-    text-decoration: none;
+}
+
+form input[type="submit"]:disabled,
+form input[type="submit"]:disabled:hover {
+    cursor: not-allowed;
+    background-color: var(--main-text);
+    color: var(--sec-bg);
+    border: none!important;
+    opacity: 0.8;
+}
+
+.transition {
+    -webkit-transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+    -moz-transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+    -o-transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
+    transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
 }

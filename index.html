@@ -80,23 +80,26 @@
                     </div>
                 </div>
                 <div class="grid-container" id="images">
-                    <div class="grid-item" style="background-image: url(./img/projects/0.jpg);"></div>
-                    <div class="grid-item" style="background-image: url(./img/projects/1.jpg);"></div>
-                    <div class="grid-item" style="background-image: url(./img/projects/2.jpg);"></div>
-                    <div class="grid-item" style="background-image: url(./img/projects/3.jpg);"></div>
-                    <div class="grid-item" style="background-image: url(./img/projects/4.jpg);"></div>
-                    <div class="grid-item" style="background-image: url(./img/projects/5.jpg);"></div>
-                    <div class="grid-item" style="background-image: url(./img/projects/6.jpg);"></div>
-                    <div class="grid-item" style="background-image: url(./img/projects/7.jpg);"></div>
-                    <div class="grid-item" style="background-image: url(./img/projects/8.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/0.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/1.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/2.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/3.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/4.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/5.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/6.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/7.jpg);"></div>
+                    <div class="grid-item transition" style="background-image: url(./img/projects/8.jpg);"></div>
                 </div>
-                <div class="form">
-                    <a href="mailto:robin@robin-prillwitz.de?subject=Some%20Subject&body=I%20wanna%20give%20you%20money">Ayyyyy shoot me a mail or shoot me, idc</a>
-                </div>
+                <form name="send" action="email.php" method="post" onsubmit="validateForm()">
+                    <h1>Hmu!</h1>
+                    <input required class="transition" type="text" name="name" placeholder="Name" oninput="updateSubmit();">
+                    <input required class="transition" type="email" name="email" placeholder="E-Mail" oninput="updateSubmit();">
+                    <textarea required class="transition" name="msg" cols="8" rows="10" placeholder="Nachricht" oninput="updateSubmit();"></textarea>
+                    <input disabled class="transition" type="submit" value="Abschicken" id="submit">
+                </form>
             </div>
         </main>
         <footer class="bar">
-            <p>robin@robin-prillwitz.de</p>
             <p>&#169; Robin Prillwitz 2019</p>
         </footer>
     </div>
