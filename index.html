@@ -24,7 +24,7 @@
             --main-text: rgb(225, 225, 225);
             --main-accent: rgb(125, 190, 242);
             --sec-bg: rgb(24, 56, 85);
-/*             --main-bg: #363B59;
+            /*             --main-bg: #363B59;
             --main-text: #CCD7F4;
             --main-accent: #48D9CA;
             --sec-bg: #3D4573; */
@@ -32,88 +32,139 @@
     </style>
     <svg style="width: 0; height: 0; position: absolute;">
         <filter id="tint">
-                <feColorMatrix in="SourceGraphic" type="saturate" result="saturate" values="0.08"></feColorMatrix>
-                <feFlood flood-color="var(--sec-bg)" result="fill"></feFlood>
-                <feComposite in="saturate" in2="fill" operator="arithmetic" k1="0" k2="1" k3="1.001" k4="-0.011" result="out"></feComposite>
-                <feComposite operator="in" result="alpha" in="out" in2="SourceAlpha"></feComposite>
+            <feColorMatrix in="SourceGraphic" type="saturate" result="saturate" values="0.08"></feColorMatrix>
+            <feFlood flood-color="var(--sec-bg)" result="fill"></feFlood>
+            <feComposite in="saturate" in2="fill" operator="arithmetic" k1="0" k2="1" k3="1.001" k4="-0.011"
+                result="out"></feComposite>
+            <feComposite operator="in" result="alpha" in="out" in2="SourceAlpha"></feComposite>
         </filter>
     </svg>
 </head>
 
 <body ontouchstart="">
     <!-- <div id="main-content"> -->
-        <header class="bar">
-            <div><span class="thicc highlight">Robin</span> <i>Prillwitz</i></div>
-            <nav>
-                <ul>
-                    <li target="bio" >Bio</li>
-                    <li target="images" >Zeug</li>
-                    <li target="kontakt" >Kontakt</li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <hero>
-                <span class="big highlight"></span>
-                <div class="hero-img"></div>
-            </hero>
-            <div class="content">
-                <div class="bio">
-                    <h1 id="bio">Ich bin Robin.</h1>
-                    <p>
-                        Ich mache Fotos, Videos, Filme & Animationen.<br>
-                        <span class="tiny">Anscheinend auch Webseiten.</span>
-                    </p>
-                    <div class="video-container">
-                        <video autoplay preload muted loop playsinline id="avatar">
-                            <source src="./img/avatar.webm" type="video/webm">
-                            <source src="./img/avatar.mov" type="video/mp4">
-                            <source src="./img/avatar.mp4" type="video/mov">
-                        </video>
+    <header class="bar">
+        <div><span class="thicc highlight">Robin</span> <i>Prillwitz</i></div>
+        <nav>
+            <ul>
+                <li target="bio">Bio</li>
+                <li target="images">Zeug</li>
+                <li target="kontakt">Kontakt</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <hero>
+            <span class="big highlight"></span>
+            <div class="hero-img"></div>
+        </hero>
+        <div class="content">
+            <div class="bio">
+                <h1 id="bio">Ich bin Robin.</h1>
+                <p>
+                    Ich mache Fotos, Videos, Filme & Animationen.<br>
+                    <span class="tiny">Anscheinend auch Webseiten.</span>
+                </p>
+                <div class="video-container">
+                    <video autoplay preload muted loop playsinline id="avatar">
+                        <source src="./img/avatar.webm" type="video/webm">
+                        <source src="./img/avatar.mov" type="video/mp4">
+                        <source src="./img/avatar.mp4" type="video/mov">
+                    </video>
+                </div>
+                <div class="description">
+                    <div>
+                        <h2>Wo?</h2>
+                        <p>In und um Eggenfelden.<br>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://www.google.com/maps/place/84307+Eggenfelden/@48.3640058,12.439802,9.47z/">Also
+                                hier so.</a>
+                        </p>
                     </div>
-                    <div class="description">
-                        <div>
-                            <h2>Wo?</h2>
-                            <p>In und um Eggenfelden in Niederbayern.<br>
-                            <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/84307+Eggenfelden/@48.3640058,12.439802,9.47z/">Also hier so.</a>
-                            </p>
-                        </div>
-                        <div>
-                            <h2>Was?</h2>
-                            <p><i>(bewegte)</i> Bilder.<br>Mit Kamera oder Computer.</p>
-                        </div>
-                        <div>
-                            <h2>?!?</h2>
-                            <p>Drei Sachen sehn gut aus. Aber was noch?</p>
-                        </div>
+                    <div>
+                        <h2>Was?</h2>
+                        <p><i>(bewegte)</i> Bilder.<br>Mit Kamera oder Computer.</p>
+                    </div>
+                    <div>
+                        <h2>?!?</h2>
+                        <p>Drei Sachen sehn gut aus.<br>Aber was soll hier noch hin?</p>
                     </div>
                 </div>
-                <div class="grid-container" id="images">
-                    <div class="grid-item transition" style="background-image: url(./img/projects/0.jpg);"></div>
-                    <div class="grid-item transition" style="background-image: url(./img/projects/1.jpg);"></div>
-                    <div class="grid-item transition" style="background-image: url(./img/projects/2.jpg);"></div>
-                    <div class="grid-item transition" style="background-image: url(./img/projects/3.jpg);"></div>
-                    <div class="grid-item transition" style="background-image: url(./img/projects/4.jpg);"></div>
-                    <div class="grid-item transition" style="background-image: url(./img/projects/5.jpg);"></div>
-                    <div class="grid-item transition" style="background-image: url(./img/projects/6.jpg);"></div>
-                    <div class="grid-item transition" style="background-image: url(./img/projects/7.jpg);"></div>
-                    <div class="grid-item transition" style="background-image: url(./img/projects/8.jpg);"></div>
-                </div>
-                <form name="send" action="email.php" method="POST">
-                    <h1 id="kontakt">Schreib mich an!</h1>
-                    <input required class="transition" type="text" name="name" id="name" oninput="updateSubmit();"  autocomplete="on">
-                    <label for="name">Name</label>
-                    <input required class="transition" type="email" name="email" id="email" oninput="updateSubmit();"  autocomplete="on">
-                    <label for="email">E-Mail</label>
-                    <textarea required class="transition" name="msg" id="msg" cols="8" rows="10" oninput="updateSubmit();"></textarea>
-                    <label for="msg">Nachricht</label>
-                    <input disabled class="transition" type="submit" value="Abschicken" id="submit">
-                </form>
             </div>
-        </main>
-        <footer class="bar">
-            <p>&#169; Robin Prillwitz 2019</p>
-        </footer>
+            <div class="grid-container" id="images">
+                <div class="grid-item transition" style="background-image: url(./img/projects/0.jpg);">
+                    <div class="popup">
+                        <h3>Dog</h3>
+                        <p>good boi</p>
+                    </div>
+                </div>
+                <div class="grid-item transition" style="background-image: url(./img/projects/1.jpg);">
+                    <div class="popup">
+                        <h3>same Dog</h3>
+                        <p>still a good boi</p>
+                    </div>
+                </div>
+                <div class="grid-item transition" style="background-image: url(./img/projects/2.jpg);">
+                    <div class="popup">
+                        <h3>from pompeii</h3>
+                        <p>was sleeping just past the entrance</p>
+                    </div>
+                </div>
+                <div class="grid-item transition" style="background-image: url(./img/projects/3.jpg);">
+                    <div class="popup">
+                        <h3>diffrential eyes</h3>
+                        <p>he's got a blue and an amber eye, i think</p>
+                    </div>
+                </div>
+                <div class="grid-item transition" style="background-image: url(./img/projects/4.jpg);">
+                    <div class="popup">
+                        <h3>dont know</h3>
+                        <p>not too sure on the last fact</p>
+                    </div>
+                </div>
+                <div class="grid-item transition" style="background-image: url(./img/projects/5.jpg);">
+                    <div class="popup">
+                        <h3>more exist</h3>
+                        <p>took more images of him tho</p>
+                    </div>
+                </div>
+                <div class="grid-item transition" style="background-image: url(./img/projects/6.jpg);">
+                    <div class="popup">
+                        <h3>./ROM2018/Pompeii</h3>
+                        <p>find em yourself on MEGA (path probably wrong, i gave the folders stupid names)</p>
+                    </div>
+                </div>
+                <div class="grid-item transition" style="background-image: url(./img/projects/7.jpg);">
+                    <div class="popup">
+                        <h3>if you care that is</h3>
+                        <p>dont know if you do or just here for the comment on</p>
+                    </div>
+                </div>
+                <div class="grid-item transition" style="background-image: url(./img/projects/8.jpg);">
+                    <div class="popup">
+                        <h3>Jenni</h3>
+                        <p>good boi</p>
+                    </div>
+                </div>
+            </div>
+            <form name="send" action="email.php" method="POST">
+                <h1 id="kontakt">Schreib mich an!</h1>
+                <input required class="transition" type="text" name="name" id="name" oninput="updateSubmit();"
+                    autocomplete="on">
+                <label for="name">Name</label>
+                <input required class="transition" type="email" name="email" id="email" oninput="updateSubmit();"
+                    autocomplete="on">
+                <label for="email">E-Mail</label>
+                <textarea required class="transition" name="msg" id="msg" cols="8" rows="10"
+                    oninput="updateSubmit();"></textarea>
+                <label for="msg">Nachricht</label>
+                <input disabled class="transition" type="submit" value="Abschicken" id="submit">
+            </form>
+        </div>
+    </main>
+    <footer class="bar">
+        <p>&#169; Robin Prillwitz 2019</p>
+    </footer>
     <!-- </div> -->
 
 </body>
