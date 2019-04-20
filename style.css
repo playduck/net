@@ -312,7 +312,7 @@ form textarea {
     padding: 5pt;
     font-size: 16pt;
     margin: 5pt;
-    border-radius: 2pt;
+    border-radius: 1pt;
     text-align: center;
 
     background-color: var(--main-bg);
@@ -333,6 +333,7 @@ form textarea:focus {
 
 form input[type="submit"]   {
     cursor: pointer;
+    margin: 5pt;
 }
 
 form input[type="submit"]:hover   {
@@ -349,7 +350,9 @@ form input[type="submit"]:disabled:hover {
 }
 
 form label {
-    display: none;
+    font-size: 15pt;
+    padding: 1pt 0 5pt 0;
+    cursor: text;
 }
 
 .transition {
