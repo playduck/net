@@ -90,11 +90,11 @@
                     <div class="grid-item transition" style="background-image: url(./img/projects/7.jpg);"></div>
                     <div class="grid-item transition" style="background-image: url(./img/projects/8.jpg);"></div>
                 </div>
-                <form name="send" action="email.php" method="post" onsubmit="validateForm()">
+                <form name="send" action="email.php" method="POST">
                     <h1>Hmu!</h1>
-                    <input required class="transition" type="text" name="name" placeholder="Name" oninput="updateSubmit();">
-                    <input required class="transition" type="email" name="email" placeholder="E-Mail" oninput="updateSubmit();">
-                    <textarea required class="transition" name="msg" cols="8" rows="10" placeholder="Nachricht" oninput="updateSubmit();"></textarea>
+                    <input required class="transition" type="text" name="name" id="name" placeholder="Name" oninput="updateSubmit();">
+                    <input required class="transition" type="email" name="email" id="email" placeholder="E-Mail" oninput="updateSubmit();">
+                    <textarea required class="transition" name="msg" id="msg" cols="8" rows="10" placeholder="Nachricht" oninput="updateSubmit();"></textarea>
                     <input disabled class="transition" type="submit" value="Abschicken" id="submit">
                 </form>
             </div>
