@@ -92,8 +92,11 @@
                 </div>
                 <form name="send" action="email.php" method="POST">
                     <h1>Hmu!</h1>
+                    <label for="name">Name</label>
                     <input required class="transition" type="text" name="name" id="name" placeholder="Name" oninput="updateSubmit();">
+                    <label for="email">E-Mail</label>
                     <input required class="transition" type="email" name="email" id="email" placeholder="E-Mail" oninput="updateSubmit();">
+                    <label for="msg">Nachricht</label>
                     <textarea required class="transition" name="msg" id="msg" cols="8" rows="10" placeholder="Nachricht" oninput="updateSubmit();"></textarea>
                     <input disabled class="transition" type="submit" value="Abschicken" id="submit">
                 </form>

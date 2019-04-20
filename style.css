@@ -348,6 +348,10 @@ form input[type="submit"]:disabled:hover {
     opacity: 0.8;
 }
 
+form label {
+    display: none;
+}
+
 .transition {
     -webkit-transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
     -moz-transition: all 100ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
