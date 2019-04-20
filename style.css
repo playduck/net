@@ -91,6 +91,7 @@
     .grid-item {
         width: 40vh !important;
         height: 40vh !important;
+        filter: none!important;
     }
 }
 
@@ -329,6 +330,7 @@ form input:focus,
 form textarea:focus {
     border-bottom: 4px solid var(--main-accent)!important;
     margin-bottom: 0px!important;
+    outline: none;
 }
 
 form input[type="submit"]   {
