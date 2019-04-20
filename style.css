@@ -429,6 +429,7 @@ form textarea:focus {
 form input[type="submit"]   {
     cursor: pointer;
     margin: 5pt;
+    margin-bottom: 2px;
 }
 
 form input[type="submit"]:hover   {
