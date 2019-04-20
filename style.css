@@ -363,6 +363,7 @@ video{
     position: relative;
     padding: 10pt;
     width: 25vw;
+    text-align: center;
 
     align-self: flex-end;
 
