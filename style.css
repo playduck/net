@@ -43,6 +43,15 @@
     background: var(--main-accent);
 }
 
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg: rgb(253, 254, 255)!important;
+        --main-text: rgb(26, 28, 29)!important;
+        --main-accent: rgb(92, 146, 191)!important;
+        --sec-bg: rgb(197, 204, 216)!important;
+    }
+}
+
 @media only screen and (max-width: 1550px) {
     .big::before {
         content: "R." !important;
@@ -52,8 +61,8 @@
         transform: none !important;
     }
 
-    header {
-        margin-bottom: 600px !important;
+    main {
+        margin-top: 600px !important;
     }
     .description {
         flex-direction: column!important;
@@ -69,6 +78,10 @@
     html,
     body {
         font-size: 12pt !important;
+    }
+
+    header nav ul li a {
+        margin-left: 2pt;
     }
 
     .title {
@@ -99,8 +112,6 @@ html,
 body {
     position: relative;
     min-height: 100%;
-    height: 100%;
-    overflow: hidden;
     -webkit-overflow-scrolling: touch;
     margin: 0;
     padding: 0;
@@ -113,6 +124,14 @@ body {
     font-weight: 300;
     font-style: normal;
     letter-spacing: 1pt;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    scroll-behavior: smooth!important;
+
+    overflow-x: hidden;
 }
 
 #main-content {
@@ -140,10 +159,9 @@ body {
 }
 
 header {
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky; */
+    position: fixed;
     top: -1px;
-    margin-bottom: 700px;
 }
 
 header nav ul {
@@ -153,12 +171,28 @@ header nav ul {
     align-items: center;
 }
 
+header nav ul li {
+    color: var(--main-accent);
+    text-decoration: none;
+    margin-left: 10pt;
+}
+
+header nav ul li:hover {
+    margin-bottom: -2px;
+    border-bottom: 2px solid var(--main-accent);
+    cursor: pointer;
+}
+
 footer {
     position: relative;
     padding: 0.25em;
     max-height: 150px!important;
     height: 10vh!important;
     border-top: 4px solid var(--main-accent);
+}
+
+main {
+    margin-top: 700px;
 }
 
 button {
@@ -213,6 +247,10 @@ h1 {
     margin: 0;
 }
 
+.tiny   {
+    font-size: 14pt;
+}
+
 .thicc {
     font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: 700;
@@ -242,10 +280,17 @@ h1 {
 }
 
 .description {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.description p a {
+    cursor: pointer;
+    color: var(--main-accent);
 }
 
 .video-container {

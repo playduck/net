@@ -4,7 +4,29 @@
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout( () => {
         document.getElementById("avatar").play();
+
+        // document.querySelector('#submit').scrollIntoView({ 
+        //     behavior: 'smooth'
+        // });
     }, 200);
+
+    const items = [...document.querySelector("header nav ul").children];
+    items.forEach( (e) => {
+        e.addEventListener("click", () => {
+            // document.getElementById(e.getAttribute("target")).scrollIntoView({ 
+            //     behavior: 'smooth'
+            // });
+            let body = document.body.getBoundingClientRect();
+            let el = document.getElementById(e.getAttribute("target")).getBoundingClientRect();
+            let top = Math.round( el.top - body.top -55 );
+            console.log(top);
+            window.scrollTo({
+                left: 0, 
+                top: top,
+                behavior: "smooth"
+            });
+        });
+    });
 }, false);
 
 function updateSubmit() {

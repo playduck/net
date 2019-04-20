@@ -30,7 +30,7 @@
             --sec-bg: #3D4573; */
         }
     </style>
-    <svg>
+    <svg style="width: 0; height: 0; position: absolute;">
         <filter id="tint">
                 <feColorMatrix in="SourceGraphic" type="saturate" result="saturate" values="0.08"></feColorMatrix>
                 <feFlood flood-color="var(--sec-bg)" result="fill"></feFlood>
@@ -41,10 +41,16 @@
 </head>
 
 <body ontouchstart="">
-    <div id="main-content">
+    <!-- <div id="main-content"> -->
         <header class="bar">
             <div><span class="thicc highlight">Robin</span> <i>Prillwitz</i></div>
-            <!-- <span class="title">Fotos & Zeug</span> -->
+            <nav>
+                <ul>
+                    <li target="bio" >Bio</li>
+                    <li target="images" >Zeug</li>
+                    <li target="kontakt" >Kontakt</li>
+                </ul>
+            </nav>
         </header>
         <main>
             <hero>
@@ -53,9 +59,10 @@
             </hero>
             <div class="content">
                 <div class="bio">
-                    <h1>Ich bin Robin.</h1>
+                    <h1 id="bio">Ich bin Robin.</h1>
                     <p>
                         Ich mache Fotos, Videos, Filme & Animationen.<br>
+                        <span class="tiny">Anscheinend auch Webseiten.</span>
                     </p>
                     <div class="video-container">
                         <video autoplay preload muted loop playsinline id="avatar">
@@ -67,11 +74,13 @@
                     <div class="description">
                         <div>
                             <h2>Wo?</h2>
-                            <p>In und um Eggenfelden in Niederbayern.</p>
+                            <p>In und um Eggenfelden in Niederbayern.<br>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/84307+Eggenfelden/@48.3640058,12.439802,9.47z/">Also hier so.</a>
+                            </p>
                         </div>
                         <div>
                             <h2>Was?</h2>
-                            <p>Gute Frage! Weiß ich auch nicht.</p>
+                            <p><i>(bewegte)</i> Bilder.<br>Mit Kamera oder Computer.</p>
                         </div>
                         <div>
                             <h2>?!?</h2>
@@ -91,7 +100,7 @@
                     <div class="grid-item transition" style="background-image: url(./img/projects/8.jpg);"></div>
                 </div>
                 <form name="send" action="email.php" method="POST">
-                    <h1>Hmu!</h1>
+                    <h1 id="kontakt">Schreib mich an!</h1>
                     <input required class="transition" type="text" name="name" id="name" oninput="updateSubmit();"  autocomplete="on">
                     <label for="name">Name</label>
                     <input required class="transition" type="email" name="email" id="email" oninput="updateSubmit();"  autocomplete="on">
@@ -105,7 +114,7 @@
         <footer class="bar">
             <p>&#169; Robin Prillwitz 2019</p>
         </footer>
-    </div>
+    <!-- </div> -->
 
 </body>
 
