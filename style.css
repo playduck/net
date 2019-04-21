@@ -166,24 +166,26 @@ button {
     font-style: normal;
 }
 
-.big::before {
+.big::after {
     content: "robin.";
 
     font-family: yrsa, serif !important;
     font-weight: 500 !important;
     font-style: normal;
-    letter-spacing: -130px;
+    letter-spacing: -160px;
     word-break: keep-all;
 
-    mix-blend-mode: overlay;
+    /* mix-blend-mode: overlay; */
 
-    position: absolute;
-    top: -130pt;
+    position: fixed;
+    top: -30pt;
     left: 50%;
-    transform: translate(-55%, 0);
-    font-size: 800pt;
+    transform: translate(-50%, 0);
+    font-size: 100vh;
 
-    z-index: 5;
+    color: var(--main-bg)!important;
+
+    z-index: 2;
 }
 
 .fixed {
@@ -474,10 +476,9 @@ form label {
 /* MOBILE */
 
 @media only screen and (max-width: 1550px) {
-    .big::before {
+    .big::after {
         content: "R.";
-        top: -240pt;
-        left: -70pt;
+        left: -60pt;
         letter-spacing: -35pt;
         transform: none;
     }
@@ -509,7 +510,6 @@ form label {
     body {
         font-size: 12pt;
     }
-
     header nav ul li a {
         margin-left: 2pt;
     }
