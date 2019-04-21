@@ -3,11 +3,10 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    window.addEventListener("scroll", (e) => {
+    /* window.addEventListener("scroll", (e) => {
         let delta = (Math.round(window.scrollY + 50) - Math.round(parseFloat(window.getComputedStyle(document.querySelector(".hero-img")).height)));
         document.querySelector(".fixed").style.opacity = Math.max(Math.min(map_range(delta, -300, 50, 1, 0),1) , 0);
-
-    });
+    }); */
 
     setTimeout(() => {
         document.getElementById("avatar").play();

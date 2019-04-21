@@ -189,7 +189,7 @@ button {
 }
 
 .fixed {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 475pt;
     top: 0%;
