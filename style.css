@@ -172,16 +172,16 @@ button {
     font-family: yrsa, serif !important;
     font-weight: 500 !important;
     font-style: normal;
-    letter-spacing: -160px;
+    letter-spacing: -150px;
+    font-size: 100vh;
     word-break: keep-all;
 
     /* mix-blend-mode: overlay; */
 
-    position: fixed;
+    position: absolute;
     top: -30pt;
     left: 50%;
     transform: translate(-50%, 0);
-    font-size: 100vh;
 
     color: var(--main-bg)!important;
 
@@ -196,7 +196,7 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    /* background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%); */
 }
 
 .hero-img {
@@ -205,9 +205,9 @@ button {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: 70% 0%;
+    background-position: 60% 70%;
     /* background-attachment: fixed; */
-    filter: brightness(1.4) url(#tint);
+    filter: brightness(1);
 
     /* top: -200pt;
     position: fixed; */
@@ -248,7 +248,6 @@ h1 {
     text-align: center;
     padding: 0;
     display: flex;
-    min-height: 80vh;
 
     flex-direction: column;
     z-index: 6;
@@ -266,7 +265,7 @@ h1 {
     grid-gap: 15px 15px;
 }
 
-.description p a {
+p a {
     cursor: pointer;
     color: var(--main-accent);
 }
@@ -513,7 +512,9 @@ form label {
     header nav ul li a {
         margin-left: 2pt;
     }
-
+    .big::after {
+        top: -140pt;
+    }
     .title {
         display: none;
         visibility: hidden;
