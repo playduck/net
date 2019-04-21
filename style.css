@@ -484,7 +484,7 @@ form label {
         transform: none;
     }
     .section h2 {
-        max-width: 40vw;
+        max-width: 40vh;
     }
     .description {
         grid-template-columns: 1fr;
