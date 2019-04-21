@@ -189,13 +189,13 @@ button {
 }
 
 .fixed {
-    /* position: fixed; */
+    position: absolute;
     width: 100vw;
     height: 475pt;
-    /* top: 0%;
+    top: 0%;
     bottom: 0;
     left: 0;
-    right: 0; */
+    right: 0;
     /* background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%); */
 }
 
