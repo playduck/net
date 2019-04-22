@@ -35,23 +35,14 @@
 }
 
 ::-moz-selection {
-    color: var(--sec-bg);
+    color: var(--main-bg);
     background: var(--main-accent);
 }
 
 ::selection {
-    color: var(--sec-bg);
+    color: var(--main-bg);
     background: var(--main-accent);
 }
-/* 
-@media (prefers-color-scheme: light) {
-    :root {
-        --main-bg: rgb(253, 254, 255) !important;
-        --main-text: rgb(26, 28, 29) !important;
-        --main-accent: rgb(92, 146, 191) !important;
-        --sec-bg: rgb(197, 204, 216) !important;
-    }
-} */
 
 html,
 body {
@@ -79,16 +70,6 @@ body {
     -webkit-overflow-scrolling: touch;
 
     overflow-x: hidden;
-}
-
-#main-content {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 .scroller {
@@ -122,7 +103,6 @@ body {
 }
 
 header {
-    /* position: -webkit-sticky; */
     position: fixed;
     top: -1px;
     mix-blend-mode: darken;
@@ -185,7 +165,7 @@ button {
     left: 50%;
     transform: translate(-50%, 0);
 
-    color: var(--main-bg)!important;
+    color: var(--main-bg) !important;
 
     z-index: 2;
 }
@@ -198,7 +178,6 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    /* background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%); */
 }
 
 .hero-img {
@@ -208,11 +187,8 @@ button {
     -o-background-size: cover;
     background-size: cover;
     background-position: 60% 70%;
-    /* background-attachment: fixed; */
     filter: brightness(1);
 
-    /* top: -200pt;
-    position: fixed; */
     width: 100vw;
     height: 80vh;
 }
@@ -309,12 +285,6 @@ video {
     display: flex;
     scroll-snap-align: center;
 
-    /* 
-    -webkit-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
-    -moz-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
-    -o-transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000);
-    transition: all 250ms cubic-bezier(0.600, 0.010, 0.580, 1.000); */
-
     filter: url(#tint);
 }
 
@@ -389,6 +359,7 @@ form textarea {
     margin: 5pt;
     border-radius: 1pt;
     text-align: left;
+    resize: none;
 
     background-color: var(--main-bg);
     border: none;
@@ -409,8 +380,8 @@ form textarea:focus {
 
 form input[type="submit"] {
     cursor: pointer;
-    margin: 5pt;
-    margin-bottom: 2px;
+    width: 160px;
+    margin: 20pt auto 2px;
     text-align: center;
 }
 
@@ -443,8 +414,10 @@ form label {
     height: auto;
     top: 90%;
     left: 50%;
-    margin-top: 0; /* Negative half of height. */
-    margin-left: -45vw; /* Negative half of width. */
+    margin-top: 0;
+    /* Negative half of height. */
+    margin-left: -45vw;
+    /* Negative half of width. */
 
     text-align: center;
     border-radius: 5pt;
@@ -473,7 +446,6 @@ form label {
     transform: translateY(0pt);
 }
 
-
 /* MOBILE */
 
 @media only screen and (max-width: 1550px) {
@@ -483,15 +455,17 @@ form label {
         letter-spacing: -35pt;
         transform: none;
     }
+
     .section h2 {
         max-width: 40vh;
     }
+
     .description {
         grid-template-columns: 1fr;
     }
 
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .grid-item {
@@ -504,7 +478,6 @@ form label {
     .grid-item:hover .popup {
         width: calc(40vh - 8px);
     }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -513,12 +486,15 @@ form label {
     body {
         font-size: 12pt;
     }
+
     header nav ul li a {
         margin-left: 2pt;
     }
+
     .big::after {
         top: -140pt;
     }
+
     .title {
         display: none;
         visibility: hidden;
@@ -530,5 +506,15 @@ form label {
 
     form {
         width: 90%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg: #0f1010 !important;
+        --main-text: rgb(239, 239, 244) !important;
+        --main-accent: rgb(60, 159, 116) !important;
+        --sec-bg: rgb(42, 45, 46) !important;
+        --tint: rgb(24, 53, 84) !important;
     }
 }
