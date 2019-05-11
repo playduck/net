@@ -3,10 +3,12 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* window.addEventListener("scroll", (e) => {
-        let delta = (Math.round(window.scrollY + 50) - Math.round(parseFloat(window.getComputedStyle(document.querySelector(".hero-img")).height)));
-        document.querySelector(".fixed").style.opacity = Math.max(Math.min(map_range(delta, -300, 50, 1, 0),1) , 0);
-    }); */
+    window.addEventListener("resize", updateBig);
+    updateBig();
+
+    window.addEventListener("scroll", (e) => {
+        document.getElementById("big-name").style = `transform: translate(-50%, ${window.scrollY / 1.5}px)!important;`;
+    });
 
     setTimeout(() => {
         document.getElementById("avatar").play();
@@ -70,4 +72,12 @@ function validateEmail(email) {
 
 function map_range(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
+
+function updateBig()    {
+    if(window.innerWidth <= 1550)   {
+        document.getElementById("big-name").innerText = "R.";
+    }   else    {
+        document.getElementById("big-name").innerText = "robin.";
+    }
 }

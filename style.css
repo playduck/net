@@ -51,8 +51,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: var(--main-bg);
-    background-image: linear-gradient(135deg, var(--main-bg) 0%, var(--sec-bg) 100%);
+    background-color: var(--tint);
     color: var(--main-text);
 
     font-size: 18pt;
@@ -68,7 +67,6 @@ body {
     right: 0;
 
     -webkit-overflow-scrolling: touch;
-
     overflow-x: hidden;
 }
 
@@ -148,13 +146,13 @@ button {
     font-style: normal;
 }
 
-.big::after {
+.big {
     content: "robin.";
 
     font-family: yrsa, serif !important;
     font-weight: 500 !important;
     font-style: normal;
-    letter-spacing: -150px;
+    letter-spacing: -12vh;
     font-size: 100vh;
     word-break: keep-all;
 
@@ -166,7 +164,6 @@ button {
     transform: translate(-50%, 0);
 
     color: var(--main-bg) !important;
-
     z-index: 2;
 }
 
@@ -188,9 +185,11 @@ button {
     background-size: cover;
     background-position: 60% 70%;
     filter: brightness(1);
+    opacity: 0.7;
 
     width: 100vw;
     height: 80vh;
+    z-index: -1;
 }
 
 h1 {
@@ -449,11 +448,9 @@ form label {
 /* MOBILE */
 
 @media only screen and (max-width: 1550px) {
-    .big::after {
+    .big {
         content: "R.";
-        left: -60pt;
         letter-spacing: -35pt;
-        transform: none;
     }
 
     .section h2 {
@@ -491,13 +488,21 @@ form label {
         margin-left: 2pt;
     }
 
-    .big::after {
-        top: -140pt;
+    .big {
+        top: -100pt;
+    }
+
+    .fixed {
+        height: 250pt;
     }
 
     .title {
         display: none;
         visibility: hidden;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
     }
 
     body.scroller {
@@ -515,6 +520,6 @@ form label {
         --main-text: rgb(239, 239, 244) !important;
         --main-accent: rgb(60, 159, 116) !important;
         --sec-bg: rgb(42, 45, 46) !important;
-        --tint: rgb(24, 53, 84) !important;
+        --tint: rgb(16, 63, 41) !important;
     }
 }

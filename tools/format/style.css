@@ -1,0 +1,62 @@
+.content {
+    width: 99vw;
+    height: 100vh;
+
+}
+.cols {
+    width: 100%;
+    height: 90vh;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+}
+.in, .out {
+    display: flex;
+    flex-direction: column;
+}
+.in textarea, .out textarea {
+    height: 100%;
+}
+.out {
+    padding: 2rem;
+}
+.out div {
+    padding-top: 1rem;
+    background-color: gray;
+}
+button {
+    margin: auto;
+    width: 10rem;
+    padding: 1rem;
+    cursor: pointer;
+    border: 1px solid ghostwhite;
+}
+button:hover {
+    background-color: ghostwhite;
+    border: 1px solid black;
+}
+
+@font-face {
+    font-family: 'avengance';
+    src: url("./res/AVENGEANCE HEROIC AVENGER.otf"), local("AVENGANCE HEROIC AVNEGER");
+}
+@font-face {
+    font-family: 'marion';
+    src: url("./res/Marion.ttc"), local("Marion");
+}
+
+
+#out-name {
+    font-family: avengance;
+    font-size: 30pt;
+    color: white;
+}
+
+#out-att, #out-text {
+    font-family: marion;
+    font-size: 12px;
+    font-kerning: auto;
+    line-height: 14.4pt;
+}
+#out-text {
+    /* text-indent: 10pt; */
+}

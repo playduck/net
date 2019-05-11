@@ -25,7 +25,7 @@
             --main-text: rgb(25, 25, 26);
             --main-accent: rgb(60, 159, 116);
             --sec-bg: rgb(213, 220, 225);
-            --tint: rgb(24, 53, 84);
+            --tint: rgb(24, 80, 84);
         }
     </style>
     <svg style="width: 0; height: 0; position: absolute;">
@@ -52,9 +52,7 @@
     </header> -->
     <main>
         <hero class="section">
-            <!-- <span class="big highlight"></span> -->
-            <span class="big"></span>
-
+            <span class="big" id="big-name">robin.</span>
             <div class="fixed">
                 <div class="hero-img"></div>
             </div>
@@ -155,15 +153,15 @@
                 <form name="send" action="email.php" method="POST">
                     <h2 id="kontakt">Schreib mir!</h2>
                     <input required class=" " type="text" name="name" id="name" oninput="updateSubmit();"
-                        autocomplete="on">
+                        autocomplete="name" placeholder="Max Mustermann">
                     <label for="name">Name</label>
 
                     <input required class=" " type="email" name="email" id="email" oninput="updateSubmit();"
-                        autocomplete="on">
+                        autocomplete="email" placeholder="Max@gmail.de">
                     <label for="email">E-Mail</label>
 
                     <textarea required class=" " name="msg" id="msg" cols="8" rows="10"
-                        oninput="updateSubmit();"></textarea>
+                        oninput="updateSubmit();" placeholder="Sag was..."></textarea>
                     <label for="msg">Nachricht</label>
 
                     <input disabled class=" " type="submit" value="Abschicken" id="submit">
