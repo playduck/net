@@ -47,7 +47,7 @@ button:hover {
 
 #out-name {
     font-family: avengance;
-    font-size: 30pt;
+    font-size: 30px;
     color: white;
 }
 
@@ -55,7 +55,7 @@ button:hover {
     font-family: marion;
     font-size: 12px;
     font-kerning: auto;
-    line-height: 14.4pt;
+    line-height: 14.4px;
 }
 #out-text {
     /* text-indent: 10pt; */
