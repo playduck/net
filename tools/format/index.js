@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         
-        let main = "\n\t"+sp[2];
+        let main = "\n";
+        for(let i = 2; i < sp.length; i++)  {
+            main += sp[i];
+        }
 
         document.getElementById("out-name").innerHTML = name;
         document.getElementById("out-att").innerHTML = att;
