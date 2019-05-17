@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         let main = "\n";
         for(let i = 2; i < sp.length; i++)  {
-            main += sp[i];
+            main += "<br>" + sp[i];
         }
 
         document.getElementById("out-name").innerHTML = name;
