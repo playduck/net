@@ -46,10 +46,7 @@ function doUpdate() {
         }
     }   else    {
         for(let i = 0; i < att_sp.length; i+=2)  {
-            console.log( att_sp[i] );
-            console.log( att_sp[i+1] );
-
-            att += `<b>${att_sp[i]}</b> ${att_sp[i+1]} <br>`;
+            att += `<b>${att_sp[i]}</b>: ${att_sp[i+1]} <br>`;
         }
     } 
     
