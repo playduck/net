@@ -1,0 +1,3 @@
+[submodule "linked/a51"]
+	path = linked/a51
+	url = https://github.com/playduck/area51.git
