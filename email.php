@@ -1,5 +1,5 @@
 <?php
-$to = "robin@robin-prillwitz.de";
+$to = "";
 $valid = true;
 $name = $from = $msg = $sbj = "";
 
@@ -15,7 +15,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" )  {
     }
 
     if($valid)  {
-        mail($to, $sbj, $msg, $head);
+        // mail($to, $sbj, $msg, $head);
         header("Location: index.html?mailsend");
     }   else    {
         header("Location: index.html?mailerr");
