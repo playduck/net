@@ -31,17 +31,17 @@
 }
 
 *:focus {
-    outline-color: var(--main-text) !important;
+    outline-color: var(--sec-bg) !important;
 }
 
 ::-moz-selection {
-    color: var(--main-bg);
-    background: var(--main-text);
+    color: var(--main-text);
+    background: var(--sec-bg);
 }
 
 ::selection {
-    color: var(--main-bg);
-    background: var(--main-text);
+    color: var(--main-text);
+    background: var(--sec-bg);
 }
 
 html,
@@ -65,7 +65,8 @@ body {
     right: 0;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: background-color 0.5s ease;
+    will-change: background-color color;
 }
 
 h1 {
@@ -123,7 +124,7 @@ main {
 }
 
 .links a:hover svg {
-    fill: var(--main-bg)
+    fill: var(--tint)
 }
 
 .links a:nth-child(1) {
@@ -141,9 +142,10 @@ main {
     animation: 0.35s ease-out 0.15s presentLinks both;
 }
 
-.spacer {
-    width: 0;
-    height: calc(100vh - 60vh);
+#time-display {
+    font-size: 0.7em;
+    transition: opacity 1s ease;
+    will-change: opacity;
 }
 
 .print-email {
@@ -183,7 +185,7 @@ main {
         font-size: 12pt;
     }
     main {
-        padding: 2rem;
+        padding: 3rem;
     }
 }
 
