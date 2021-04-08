@@ -31,17 +31,17 @@
 }
 
 *:focus {
-    outline-color: var(--main-accent) !important;
+    outline-color: var(--main-text) !important;
 }
 
 ::-moz-selection {
     color: var(--main-bg);
-    background: var(--main-accent);
+    background: var(--main-text);
 }
 
 ::selection {
     color: var(--main-bg);
-    background: var(--main-accent);
+    background: var(--main-text);
 }
 
 html,
@@ -51,6 +51,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--tint);
+    will-change: background-color;
     color: var(--main-text);
     font-size: 18pt;
     font-family: neue-haas-grotesk-display, sans-serif;
@@ -75,12 +76,20 @@ h1 {
 main {
     margin: auto;
     padding: 4rem;
+    width: 100vw;
+    height: 100vh;
 }
 
 .container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.container div:last-of-type {
+    margin-top: auto;
 }
 
 .links {
@@ -90,11 +99,17 @@ main {
 }
 
 .links a {
-    background: var(--sec-bg);
+    background-color: transparent;
+    border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
     position: absolute;
-    border-radius: 50%;
     transform: translateX(-50%);
+    transition: background-color 0.15s ease;
+    will-change: background-color;
+}
+
+.links a:hover {
+    background-color: var(--main-bg);
 }
 
 .links a svg {
@@ -107,17 +122,22 @@ main {
 
 .links a:nth-child(1) {
     left: calc(1rem + 0 * 2rem);
-    animation: 0.3s ease-out 0.00s presentLinks both;
+    animation: 0.35s ease-out 0.05s presentLinks both;
 }
 
 .links a:nth-child(2) {
     left: calc(1rem + 2 * 2rem);
-    animation: 0.3s ease-out 0.05s presentLinks both;
+    animation: 0.35s ease-out 0.1s presentLinks both;
 }
 
 .links a:nth-child(3) {
     left: calc(1rem + 4 * 2rem);
-    animation: 0.3s ease-out 0.10s presentLinks both;
+    animation: 0.35s ease-out 0.15s presentLinks both;
+}
+
+.spacer {
+    width: 0;
+    height: calc(100vh - 60vh);
 }
 
 .print-email {
@@ -137,7 +157,7 @@ main {
 
 @keyframes presentLinks {
     0% {
-        top: 7vw;
+        top: 9vw;
         opacity: 0;
     }
     100% {
@@ -151,10 +171,13 @@ main {
 
 @media only screen and (max-width: 1550px) {}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     html,
     body {
         font-size: 12pt;
+    }
+    main {
+        padding: 2rem;
     }
 }
 
