@@ -142,6 +142,16 @@ main {
     animation: 0.35s ease-out 0.15s presentLinks both;
 }
 
+#gradient {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(320deg, rgba(2, 0, 36, 1) 0%, rgba(2, 0, 36, 0) 100%);
+}
+
 #time-display {
     font-size: 0.7em;
     transition: opacity 1s ease;
