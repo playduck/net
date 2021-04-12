@@ -93,6 +93,19 @@ main {
     margin-top: auto;
 }
 
+.small {
+    font-size: 0.6rem;
+}
+
+.mv {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ma {
+    margin: 0;
+}
+
 .links {
     position: relative;
     width: 100%;
