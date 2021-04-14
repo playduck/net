@@ -146,18 +146,23 @@ main {
 }
 
 .links a:nth-child(1) {
-    left: calc(1rem + 0 * 2rem);
+    left: calc(1rem + 0 * 4rem);
     animation: 0.35s ease-out 0.05s presentLinks both;
 }
 
 .links a:nth-child(2) {
-    left: calc(1rem + 2 * 2rem);
+    left: calc(1rem + 1 * 4rem);
     animation: 0.35s ease-out 0.1s presentLinks both;
 }
 
 .links a:nth-child(3) {
-    left: calc(1rem + 4 * 2rem);
+    left: calc(1rem + 2 * 4rem);
     animation: 0.35s ease-out 0.15s presentLinks both;
+}
+
+.links a:nth-child(4) {
+    left: calc(1rem + 3 * 4rem);
+    animation: 0.35s ease-out 0.2s presentLinks both;
 }
 
 #gradient {
