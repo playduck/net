@@ -24,8 +24,8 @@ function setStyle(tint, text) {
         --tint: ${tint}!important;
     }`;
 
-    color_el.innerHTML = tint;
-    timezone_el.innerHTML = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    color_el.innerText = tint;
+    timezone_el.innerText = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
     metaThemeColor.setAttribute('content', tint);
     msThemeColor.setAttribute('content', tint);
